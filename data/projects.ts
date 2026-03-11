@@ -19,29 +19,32 @@ export const projects: Project[] = [
     contribution:
       "Designed layout architecture, implemented reusable components, and optimized performance.",
     images: [
-      "/projects/demo1.png",
-      "/projects/demo2.png",
-      "/projects/demo3.png",
+      "/projects/imaster/home.png",
+      "/projects/imaster/products.png",
+      "/projects/imaster/add item.png",
+      "/projects/imaster/jobs.png",
+      "/projects/imaster/db.png",
+      "/projects/imaster/db2.png",
     ],
     github: "https://github.com/ERA-46/iMaster.git",
     live: "https://your-live-link.com",
   },
-  {
-    slug: "ReMeal",
-    title: "ReMeal – College Project (Group)",
-    description:
-      "Web application for saving and distributing excess food. Restaurants can list their surplus inventory with counts and expiry dates, people in need can request food specifying the quantity, and volunteers can deliver food to those who need it.",
-    tech: ["React", "Spring Boot", "H2 Database"],
-    contribution:
-      "Developed the backend of the application.",
-    images: [
-      "/projects/demo1.png",
-      "/projects/demo2.png",
-      "/projects/demo3.png",
-    ],
-    github: "https://github.com/ERA-46/re-meal.git",
-    live: "https://your-live-link.com",
-  },
+  // {
+  //   slug: "ReMeal",
+  //   title: "ReMeal – College Project (Group)",
+  //   description:
+  //     "Web application for saving and distributing excess food. Restaurants can list their surplus inventory with counts and expiry dates, people in need can request food specifying the quantity, and volunteers can deliver food to those who need it.",
+  //   tech: ["React", "Spring Boot", "H2 Database"],
+  //   contribution:
+  //     "Developed the backend of the application.",
+  //   images: [
+  //     "/projects/demo1.png",
+  //     "/projects/demo2.png",
+  //     "/projects/demo3.png",
+  //   ],
+  //   github: "https://github.com/ERA-46/re-meal.git",
+  //   live: "https://your-live-link.com",
+  // },
   {
     slug: "Computer App",
     title: "Computer Buying Guidance App – Undergraduate Final Year Project (Individual)",
@@ -51,9 +54,23 @@ export const projects: Project[] = [
     contribution:
       "-----",
     images: [
-      "/projects/demo1.png",
-      "/projects/demo2.png",
-      "/projects/demo3.png",
+      "/projects/buymore/Home.JPG",
+      "/projects/buymore/Cpu.JPG",
+      "/projects/buymore/GPU.png",
+      "/projects/buymore/Home full.png",
+      "/projects/buymore/MB.png",
+      "/projects/buymore/Quotation.png",
+      "/projects/buymore/Quotation download.JPG",
+      "/projects/buymore/Chatbot.JPG",
+      "/projects/buymore/Chatbot 2.JPG",
+      "/projects/buymore/Chatbot 3.JPG",
+      "/projects/buymore/Chatbot 4.JPG",
+      "/projects/buymore/Login and register.jpg",
+      "/projects/buymore/register and error.jpg",
+      "/projects/buymore/admin-dashboard.png",
+      "/projects/buymore/admin-gaming-lap.png",
+      "/projects/buymore/admin-update.png",
+
     ],
     github: "https://github.com/yourusername/portfolio",
     live: "https://your-live-link.com",
@@ -67,27 +84,29 @@ export const projects: Project[] = [
     contribution:
       "--",
     images: [
-      "/projects/demo1.png",
-      "/projects/demo2.png",
-      "/projects/demo3.png",
+      "/projects/braintrickle/login.png",
+      "/projects/braintrickle/login 1.png",
+      "/projects/braintrickle/lvl.png",
+      "/projects/braintrickle/lvl 1.png",
+      "/projects/braintrickle/chart.png",
     ],
     github: "https://github.com/ERA-46/BrainTricleJavaGame.git",
     live: "https://your-live-link.com",
   },
-  {
-    slug: "Student Management System",
-    title: "Student Management System – University Project (Group)",
-    description:
-      "A Java application designed to manage students, teachers, classes, exams, messages, documents, and transactions of an institute. The admin can log in to manage students, teachers, and classes, including adding, updating, deleting data, and sending emails to students and teachers simultaneously. ",
-    tech: ["Java", "SQL Server", "Trello (for project management)"],
-    contribution:
-      "Implemented the teacher management module and the announcement/email feature.Collaborated with team members on admin functionalities. Project progress was tracked using Trello, following the Waterfall methodology.",
-    images: [
-      "/projects/demo1.png",
-      "/projects/demo2.png",
-      "/projects/demo3.png",
-    ],
-    github: "https://github.com/ERA-46/StudentManagementSystem.git",
-    live: "https://your-live-link.com",
-  },
+  // {
+  //   slug: "Student Management System",
+  //   title: "Student Management System – University Project (Group)",
+  //   description:
+  //     "A Java application designed to manage students, teachers, classes, exams, messages, documents, and transactions of an institute. The admin can log in to manage students, teachers, and classes, including adding, updating, deleting data, and sending emails to students and teachers simultaneously. ",
+  //   tech: ["Java", "SQL Server", "Trello (for project management)"],
+  //   contribution:
+  //     "Implemented the teacher management module and the announcement/email feature.Collaborated with team members on admin functionalities. Project progress was tracked using Trello, following the Waterfall methodology.",
+  //   images: [
+  //     "/projects/demo1.png",
+  //     "/projects/demo2.png",
+  //     "/projects/demo3.png",
+  //   ],
+  //   github: "https://github.com/ERA-46/StudentManagementSystem.git",
+  //   live: "https://your-live-link.com",
+  // },
 ];

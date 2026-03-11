@@ -1,7 +1,7 @@
 import Badge from "./Badge";
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-16">
+    <section id="hero" className="min-h-screen flex items-center pt-16">
       <div className="max-w-6xl mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Hi, I’m Eranda Jayawardena

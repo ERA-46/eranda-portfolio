@@ -1,5 +1,5 @@
 import { Project } from "@/data/projects";
-import Carousel from "./Carousel";
+import ImageModal from "./ImageModal";
 
 type Props = {
   project: Project;
@@ -8,7 +8,7 @@ type Props = {
 export default function ProjectCard({ project }: Props) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-      <Carousel images={project.images} />
+      <ImageModal images={project.images} />
 
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-gray-700">
