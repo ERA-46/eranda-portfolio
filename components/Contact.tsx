@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, Linkedin} from "lucide-react";
+import { Mail, Phone, Linkedin, Github} from "lucide-react";
 
 export default function Contact() {
   return (
@@ -14,7 +14,7 @@ export default function Contact() {
           Feel free to reach out. I’d be happy to connect.
         </p>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-4">
           <a
             href="mailto:erandairushan98@gmail.com"
             className="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm 
@@ -54,6 +54,20 @@ export default function Contact() {
             <div>
               <p className="font-semibold text-gray-600">LinkedIn</p>
               <p className="text-gray-500 text-sm">https://www.linkedin.com/in/eranda-jayawardena/</p>
+            </div>
+          </a>
+          <a
+            href="https://github.com/ERA-46"
+            target="_blank"
+            className="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm 
+                    hover:shadow-md hover:scale-[1.02]
+                    hover:bg-[#7842f5]/60 hover:text-white
+                    transition-all duration-300"
+          >
+            <Github className="text-gray-800" size={28} />
+            <div>
+              <p className="font-semibold text-gray-600">GitHub</p>
+              <p className="text-gray-500 text-sm">https://github.com/ERA-46</p>
             </div>
           </a>
         </div>

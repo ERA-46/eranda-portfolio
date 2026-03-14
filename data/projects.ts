@@ -5,8 +5,6 @@ export type Project = {
   tech: string[];
   contribution: string;
   images: string[];
-  github: string;
-  live?: string;
 };
 
 export const projects: Project[] = [
@@ -15,7 +13,7 @@ export const projects: Project[] = [
     title: "iMaster – College Project (Individual)",
     description:
       "Full-stack MERN web application for managing mobile shop operations. Allows adding products, editing prices and descriptions, tracking inventory, and managing repair jobs by marking them as pending or completed based on their status.",
-    tech: ["MongoDB", "Express", "React", "Node.js" ],
+    tech: ["MongoDB", "Express", "React", "Node.js"],
     contribution:
       "Designed layout architecture, implemented reusable components, and optimized performance.",
     images: [
@@ -26,8 +24,6 @@ export const projects: Project[] = [
       "/projects/imaster/db.png",
       "/projects/imaster/db2.png",
     ],
-    github: "https://github.com/ERA-46/iMaster.git",
-    live: "https://your-live-link.com",
   },
   // {
   //   slug: "ReMeal",
@@ -42,8 +38,6 @@ export const projects: Project[] = [
   //     "/projects/demo2.png",
   //     "/projects/demo3.png",
   //   ],
-  //   github: "https://github.com/ERA-46/re-meal.git",
-  //   live: "https://your-live-link.com",
   // },
   {
     slug: "Computer App",
@@ -72,8 +66,6 @@ export const projects: Project[] = [
       "/projects/buymore/admin-update.png",
 
     ],
-    github: "https://github.com/yourusername/portfolio",
-    live: "https://your-live-link.com",
   },
   {
     slug: "Mathematical Game",
@@ -90,8 +82,6 @@ export const projects: Project[] = [
       "/projects/braintrickle/lvl 1.png",
       "/projects/braintrickle/chart.png",
     ],
-    github: "https://github.com/ERA-46/BrainTricleJavaGame.git",
-    live: "https://your-live-link.com",
   },
   // {
   //   slug: "Student Management System",
@@ -106,7 +96,5 @@ export const projects: Project[] = [
   //     "/projects/demo2.png",
   //     "/projects/demo3.png",
   //   ],
-  //   github: "https://github.com/ERA-46/StudentManagementSystem.git",
-  //   live: "https://your-live-link.com",
   // },
 ];

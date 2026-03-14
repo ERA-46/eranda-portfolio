@@ -11,7 +11,7 @@ export const education: EducationItem[] = [
     logo: "/douglas-college-logo.png",
     degree: "Post-Baccalaureate Diploma in Computer & Information Systems",
     college: "Douglas College, New Westminster, BC",
-    years: "2023 – 2024",
+    years: "2023 – 2025",
     description:
       "Operating Systems, Computer Networking and Security, Mobile Application Development, Object-Oriented Programming (Java), Data Structures and Algorithms, Web Development (JavaScript, PHP), Cloud Infrastructure, Database Systems (SQL, Mongo), and Applied Research Project."
   },

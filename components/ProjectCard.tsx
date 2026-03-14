@@ -5,6 +5,23 @@ type Props = {
   project: Project;
 };
 
+const techColors: Record<string, string> = {
+  HTML: "bg-orange-200 text-orange-800",
+  CSS: "bg-blue-200 text-blue-800",
+  JavaScript: "bg-yellow-200 text-yellow-800",
+  PHP: "bg-indigo-200 text-indigo-800",
+  Bootstrap: "bg-purple-200 text-purple-800",
+  PyTorch: "bg-red-200 text-red-800",
+  Flask: "bg-gray-300 text-gray-800",
+  MongoDB: "bg-green-200 text-green-800",
+  Express: "bg-gray-200 text-gray-900",
+  React: "bg-cyan-200 text-cyan-800",
+  "Node.js": "bg-green-300 text-green-900",
+  Java: "bg-red-200 text-red-900",
+  QuickChart: "bg-pink-200 text-pink-800",
+  NetBeans: "bg-blue-300 text-blue-900"
+};
+
 export default function ProjectCard({ project }: Props) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
@@ -23,35 +40,13 @@ export default function ProjectCard({ project }: Props) {
           {project.tech.map((tech) => (
             <span
               key={tech}
-              className="text-xs bg-gray-200 px-2 py-1 rounded text-gray-700"
+              className={`text-xs px-2 py-1 rounded ${
+                techColors[tech] || "bg-gray-200 text-gray-700"
+              }`}
             >
               {tech}
             </span>
           ))}
-        </div>
-
-        <p className="text-sm text-gray-700 mb-4 text-justify">
-          <strong>My Contribution:</strong> {project.contribution}
-        </p>
-
-        <div className="flex gap-4">
-          <a
-            href={project.github}
-            target="_blank"
-            className="text-blue-600 font-medium"
-          >
-            GitHub
-          </a>
-
-          {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              className="text-blue-600 font-medium"
-            >
-              Live Demo
-            </a>
-          )}
         </div>
       </div>
     </div>
