@@ -16,10 +16,10 @@ const timeout = setTimeout(() => {
 
   return (
     <section id="skills" className="py-20">
-      <div className="max-w-6xl mx-auto px-24">
+      <div className="max-w-6xl mx-auto px-2">
         <h2 className="text-3xl font-bold mb-12 text-gray-700">Skills</h2>
 
-        <div className="space-y-6">
+        <div className="space-y-6 px-24">
           {skills.map((skill) => (
             <div key={skill.name}>
               <div className="flex justify-between mb-2">
