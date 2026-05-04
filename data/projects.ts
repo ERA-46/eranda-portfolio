@@ -16,8 +16,6 @@ export const projects: Project[] = [
     description:
       "Full-stack MERN web application for managing mobile shop operations. Allows adding products, editing prices and descriptions, tracking inventory, and managing repair jobs by marking them as pending or completed based on their status.",
     tech: ["MongoDB", "Express", "React", "Node.js"],
-    contribution:
-      "Designed layout architecture, implemented reusable components, and optimized performance.",
     images: [
       "/projects/imaster/home.png",
       "/projects/imaster/products.png",
