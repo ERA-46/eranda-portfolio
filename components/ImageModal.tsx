@@ -19,11 +19,9 @@ export default function ImageModal({ images }: Props) {
     setCurrent((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (!isOpen) return;
-
       if (e.key === "ArrowRight") nextImage();
       if (e.key === "ArrowLeft") prevImage();
       if (e.key === "Escape") setIsOpen(false);
@@ -33,7 +31,6 @@ export default function ImageModal({ images }: Props) {
     return () => window.removeEventListener("keydown", handleKey);
   }, [isOpen]);
 
-  // Swipe gestures
   const swipeHandlers = useSwipeable({
     onSwipedLeft: nextImage,
     onSwipedRight: prevImage,
@@ -41,25 +38,39 @@ export default function ImageModal({ images }: Props) {
 
   return (
     <>
-
-      <img
-        src={images[0]}
-        alt="Project screenshot"
-        className="w-full h-60 object-cover cursor-zoom-in"
+      <div
+        className="relative w-full h-60 cursor-pointer overflow-hidden group"
         onClick={() => setIsOpen(true)}
-      />
+      >
+        <img
+          src={images[0]}
+          alt="Project screenshot"
+          className="w-full h-full object-cover blur-sm scale-105 transition duration-300 group-hover:blur-md"
+        />
+        <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center gap-2 transition duration-300 group-hover:bg-black/40">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75h16.5m-16.5 0v16.5m16.5-16.5v16.5M3.75 3.75l16.5 16.5" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 9l-6 6m0 0h4.5M9 15V10.5" />
+          </svg>
+          <span className="text-white text-sm font-medium tracking-wide drop-shadow">
+            Please click to view project screenshots
+          </span>
+          <span className="text-white/60 text-xs">
+            {images.length} image{images.length !== 1 ? "s" : ""}
+          </span>
+        </div>
+      </div>
 
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {setIsOpen(false);}}
         >
           <div
             {...swipeHandlers}
             className="relative max-w-5xl w-full flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-
             <img
               src={images[current]}
               alt="Project screenshot"
@@ -67,21 +78,21 @@ export default function ImageModal({ images }: Props) {
             />
 
             <button
-                onClick={prevImage}
-                className="absolute left-4 text-white text-4xl font-bold drop-shadow-[0_0_5px_black]"
+              onClick={prevImage}
+              className="absolute left-4 text-white text-4xl font-bold drop-shadow-[0_0_5px_black]"
             >
-            ‹
+              ‹
             </button>
 
             <button
-                onClick={nextImage}
-                className="absolute right-4 text-white text-4xl font-bold drop-shadow-[0_0_5px_black]"
+              onClick={nextImage}
+              className="absolute right-4 text-white text-4xl font-bold drop-shadow-[0_0_5px_black]"
             >
-            ›
+              ›
             </button>
 
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={() => {setCurrent(0); setIsOpen(false);}}
               className="absolute top-4 right-4 text-white text-2xl drop-shadow-[0_0_5px_black]"
             >
               ✕

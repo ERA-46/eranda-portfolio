@@ -15,8 +15,8 @@ const timeout = setTimeout(() => {
 }, []);
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-8">
+    <section id="skills" className="py-20">
+      <div className="max-w-6xl mx-auto px-24">
         <h2 className="text-3xl font-bold mb-12 text-gray-700">Skills</h2>
 
         <div className="space-y-6">

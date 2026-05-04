@@ -11,7 +11,7 @@ export const experience: ExperienceItem[] = [
     logo: "/staples-logo.png",
     company: "Staples Coquitlam Canada",
     position: "Sales Associate",
-    years: "Jan 2026 – Present",
+    years: "Jan 2026 – Apr 2026",
     description:
     "• Provide technical support and sales assistance in the technology department.\n" +
     "• Perform computer diagnostics, troubleshooting, and repair services for customer devices.\n" +

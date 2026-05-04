@@ -2,8 +2,8 @@ import { education } from "@/data/education";
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-8">
+    <section id="education" className="py-20">
+      <div className="max-w-6xl mx-auto px-2">
         <h2 className="text-3xl font-bold mb-12 text-gray-700">Education</h2>
 
         <div className="flex flex-col gap-12">

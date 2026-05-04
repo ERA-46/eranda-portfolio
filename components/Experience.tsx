@@ -2,8 +2,8 @@ import { experience } from "@/data/experience";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-8">
+    <section id="experience" className="py-20">
+      <div className="max-w-6xl mx-auto px-2">
         <h2 className="text-3xl font-bold mb-12 text-gray-700">Experience</h2>
 
         <div className="flex flex-col gap-12">

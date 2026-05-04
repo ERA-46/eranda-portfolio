@@ -21,7 +21,7 @@ export const education: EducationItem[] = [
     college: "University of Bedfordshire, United Kingdom",
     years: "2021 – 2022",
     description:
-      "Software Engineering Principles, Project Management using the PRINCE2 methodology, and a Final Year Project with areport."
+      "Software Engineering Principles, Project Management using the PRINCE2 methodology, and a Final Year Project with a report."
   },
   {
     logo: "/sliit.png",
