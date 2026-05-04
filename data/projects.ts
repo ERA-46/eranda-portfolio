@@ -19,7 +19,7 @@ export const projects: Project[] = [
     images: [
       "/projects/imaster/home.png",
       "/projects/imaster/products.png",
-      "/projects/imaster/add-item.png",
+      "/projects/imaster/add item.png",
       "/projects/imaster/jobs.png",
       "/projects/imaster/db.png",
       "/projects/imaster/db2.png",
