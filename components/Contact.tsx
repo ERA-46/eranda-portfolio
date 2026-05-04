@@ -10,8 +10,7 @@ export default function Contact() {
         <h2 className="text-3xl font-bold mb-6 text-gray-600">Contact Me</h2>
 
         <p className="text-gray-600 mb-12 max-w-6xl">
-          I&apos;m currently open to opportunities and collaborations.
-          Feel free to reach out. I&apos;d be happy to connect.
+          I&apos;m open to junior and entry-level developer roles. If you have something interesting in mind or just want to connect — my inbox is always open.
         </p>
 
         <div className="grid gap-6 md:grid-cols-4">
