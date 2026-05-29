@@ -31,7 +31,6 @@ export default function Carousel({ images }: CarouselProps) {
         className="object-cover"
       />
 
-      {/* Left Arrow */}
       <button
         onClick={prevSlide}
         className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-3 py-1 rounded"
@@ -39,7 +38,6 @@ export default function Carousel({ images }: CarouselProps) {
         ‹
       </button>
 
-      {/* Right Arrow */}
       <button
         onClick={nextSlide}
         className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-3 py-1 rounded"

@@ -1,68 +1,105 @@
+"use client";
+
 import { Project } from "@/data/projects";
 import ImageModal from "./ImageModal";
 
 type Props = {
   project: Project;
+  index: number;
 };
 
-const techColors: Record<string, string> = {
-  HTML: "bg-orange-200 text-orange-800",
-  CSS: "bg-blue-200 text-blue-800",
-  JavaScript: "bg-yellow-200 text-yellow-800",
-  PHP: "bg-indigo-200 text-indigo-800",
-  Bootstrap: "bg-purple-200 text-purple-800",
-  PyTorch: "bg-red-200 text-red-800",
-  Flask: "bg-gray-300 text-gray-800",
-  MongoDB: "bg-green-200 text-green-800",
-  Express: "bg-gray-200 text-gray-900",
-  React: "bg-cyan-200 text-cyan-800",
-  "Node.js": "bg-green-300 text-green-900",
-  Java: "bg-red-200 text-red-900",
-  QuickChart: "bg-pink-200 text-pink-800",
-  NetBeans: "bg-blue-300 text-blue-900",
+const techColors: Record<string, { bg: string; text: string }> = {
+  HTML:       { bg: "#FEF3C7", text: "#92400E" },
+  CSS:        { bg: "#DBEAFE", text: "#1E40AF" },
+  JavaScript: { bg: "#FEF9C3", text: "#854D0E" },
+  PHP:        { bg: "#EDE9FE", text: "#4C1D95" },
+  Bootstrap:  { bg: "#F3E8FF", text: "#6B21A8" },
+  PyTorch:    { bg: "#FFE4E6", text: "#9F1239" },
+  Flask:      { bg: "#F3F4F6", text: "#374151" },
+  MongoDB:    { bg: "#DCFCE7", text: "#14532D" },
+  Express:    { bg: "#F1F5F9", text: "#1E293B" },
+  React:      { bg: "#CFFAFE", text: "#164E63" },
+  "Node.js":  { bg: "#BBF7D0", text: "#14532D" },
+  Java:       { bg: "#FFE4E6", text: "#7F1D1D" },
+  QuickChart: { bg: "#FCE7F3", text: "#831843" },
+  NetBeans:   { bg: "#BFDBFE", text: "#1E3A5F" },
 };
 
-export default function ProjectCard({ project }: Props) {
+export default function ProjectCard({ project, index }: Props) {
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col">
-      <ImageModal images={project.images} />
+    <div
+      className="group bg-white border border-gray-100 rounded-xl overflow-hidden flex flex-col
+                 hover:border-gray-300 hover:shadow-sm transition-all duration-300"
+      style={{
+        opacity: 0,
+        animation: `fadeUp 0.5s ease forwards ${index * 100 + 100}ms`,
+      }}
+    >
+      {/* Image */}
+      <div className="overflow-hidden">
+        <div className="transition-transform duration-500 group-hover:scale-[1.02]">
+          <ImageModal images={project.images} />
+        </div>
+      </div>
 
-      <div className="p-6 flex flex-col flex-1">
-        <h3 className="text-xl font-semibold mb-2 text-gray-700">
+      <div className="p-5 flex flex-col flex-1">
+        {/* Title */}
+        <h3
+          className="font-semibold text-gray-900 tracking-tight mb-2"
+          style={{ letterSpacing: "-0.01em" }}
+        >
           {project.title}
         </h3>
 
-        <p className="text-gray-600 mb-3 text-justify">{project.description}</p>
+        {/* Description */}
+        <p className="text-sm text-gray-500 leading-relaxed mb-3">
+          {project.description}
+        </p>
 
+        {/* Contribution */}
         {project.contribution && (
-          <p className="text-sm text-gray-500 italic mb-3">
+          <p
+            className="text-xs text-gray-400 italic mb-3"
+            style={{ fontFamily: "'DM Mono', monospace" }}
+          >
             {project.contribution}
           </p>
         )}
 
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.tech.map((tech) => (
-            <span
-              key={tech}
-              className={`text-xs px-2 py-1 rounded ${
-                techColors[tech] || "bg-gray-200 text-gray-700"
-              }`}
-            >
-              {tech}
-            </span>
-          ))}
+        {/* Tech badges */}
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {project.tech.map((tech) => {
+            const color = techColors[tech] ?? { bg: "#F3F4F6", text: "#374151" };
+            return (
+              <span
+                key={tech}
+                className="text-xs px-2 py-0.5 rounded-md font-medium"
+                style={{
+                  backgroundColor: color.bg,
+                  color: color.text,
+                  fontFamily: "'DM Mono', monospace",
+                }}
+              >
+                {tech}
+              </span>
+            );
+          })}
         </div>
 
+        {/* Links */}
         {(project.githubUrl || project.liveUrl) && (
-          <div className="flex gap-3 mt-auto pt-2">
+          <div className="flex gap-2 mt-auto pt-3 border-t border-gray-100">
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition px-3 py-1.5 rounded-lg w-full text-center"
-                >
-                GitHub Link
+                className="flex-1 text-center text-xs font-medium text-gray-500
+                           border border-gray-200 hover:border-gray-400 hover:text-gray-800
+                           transition-all duration-200 px-3 py-1.5 rounded-lg"
+                style={{ fontFamily: "'DM Mono', monospace" }}
+              >
+                GitHub ↗
               </a>
             )}
             {project.liveUrl && (
@@ -70,9 +107,12 @@ export default function ProjectCard({ project }: Props) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition px-3 py-1.5 rounded-lg w-full text-center"
+                className="flex-1 text-center text-xs font-medium
+                           bg-gray-900 hover:bg-gray-700 text-white
+                           transition-all duration-200 px-3 py-1.5 rounded-lg"
+                style={{ fontFamily: "'DM Mono', monospace" }}
               >
-                Live demo
+                Live demo ↗
               </a>
             )}
           </div>

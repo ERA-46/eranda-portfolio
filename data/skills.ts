@@ -4,5 +4,8 @@ export const skills = [
     {name: "PHP", level: 60},
     {name: "HTML/CSS", level: 70},
     {name: "SQL", level: 70},
+    {name: "Project Management", level: 80},
+    {name: "Computer Hardware", level: 90},
+
 
 ];

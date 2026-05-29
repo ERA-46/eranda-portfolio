@@ -66,4 +66,21 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/ERA-46/BrainTricleJavaGame.git",
   },
+  {
+    slug: "movie-app",
+    title: "Movie App – University Project",
+    description:
+      "Developed a Java application for managing and organizing movie data. Implemented Bubble Sort and Selection Sort algorithms to sort movies by title, release year, and rating. Integrated Binary Search for efficient movie retrieval, demonstrating proficiency in data structures, algorithms, and object-oriented programming principles.",
+    tech: ["Java", "NetBeans"],
+    images: [
+      "/projects/movieapp/home.png",
+      "/projects/movieapp/add_movie.png",
+      "/projects/movieapp/sort_by_name.png",
+      "/projects/movieapp/sort_by_year.png",
+      "/projects/movieapp/sort_by_rating.png",
+      "/projects/movieapp/search_movie.png",
+    ],
+    githubUrl: "https://github.com/ERA-46/MovieApp.git",
+  },
+  
 ];
