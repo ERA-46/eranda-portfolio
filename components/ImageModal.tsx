@@ -60,7 +60,7 @@ export default function ImageModal({ images }: Props) {
             </div>
             {images.length > 1 && (
               <span className="text-white/80 text-xs" style={{ fontFamily: "'DM Mono', monospace" }}>
-                {images.length} images
+                {images.length} images, please click to view in full size
               </span>
             )}
           </div>
@@ -96,7 +96,6 @@ export default function ImageModal({ images }: Props) {
           <div
             {...swipeHandlers}
             className="flex items-center justify-center w-full h-full px-16"
-            onClick={(e) => e.stopPropagation()}
           >
             <img
               key={current}
@@ -104,6 +103,7 @@ export default function ImageModal({ images }: Props) {
               alt={`Project screenshot ${current + 1}`}
               className="max-h-[85vh] max-w-full rounded-lg object-contain"
               style={{ animation: "fadeIn 0.2s ease" }}
+              onClick={(e) => e.stopPropagation()}
             />
           </div>
 
