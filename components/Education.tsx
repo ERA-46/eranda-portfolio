@@ -42,7 +42,7 @@ export default function Education() {
                 
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
-                    <h3 className="font-semibold text-gray-900 tracking-tight">
+                    <h3 className="font-semibold text-gray-900 tracking-tight pr-2">
                       {item.degree}
                     </h3>
                     <span
